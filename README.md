@@ -1,0 +1,2 @@
+# Connected
+hecks To See If The Internet Is Connected  ConsoleWrite("Internet Is Connected" &amp; " = " &amp; _IsInternetConnected() &amp; @CRLF) ; ( Returns "True" Or "False" )  Func _IsInternetConnected()     Local $aReturn = DllCall('connect.dll', 'long', 'IsInternetConnected')     If @error Then         Return SetError(1, 0, False)     EndIf     Return $aReturn[0] = 0 EndFunc ;==>_IsInternetConnected
